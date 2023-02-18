@@ -1,0 +1,178 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(rgb(239, 51, 239),rgb(237, 13, 237),rgb(153, 153, 213),rgb(192, 66, 192),rgb(249, 6, 249));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+:root {
+  --primary: #d81e5b;
+  --secondary: #8a4efc;
+  --light: #eee;
+  --light-alt: #61759b;
+  --dark: #131a26;
+  --dark-alt: #202b3e;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+  
+}
+#root{
+  min-height: 100vh;
+  background-color: var(--dark-alt);
+  color: var(--light);
+}
+.app{
+  padding: 32px;
+}
+.app h1{
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  letter-spacing: 3px;
+  word-spacing: 6px;
+}
+.app h4{
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--light-alt);
+  font-weight: 450;
+  margin-bottom: 2vh;
+}
+.todo{
+  
+  position: relative;
+  background-color: var(--dark);
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  width: 70vw;
+  padding: 2.2vh 2vw;
+  border-radius: 3vh 1.6vw;
+  margin-top: 2vh;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.todo:hover{
+  opacity: 0.6;
+}
+.todo .checkbox{
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  border-radius: 9px;
+  background-color: var(--dark-alt);
+   display: inline; 
+} 
+.is-complete .checkbox{
+  background-color: var(--primary);
+  background-image: linear-gradient(to bottom,var(--primary),var(--secondary));
+}
+.todo .text{
+  font-size: 1rem;
+}
+.is-complete .text{
+  text-decoration: line-through;
+}
+.todo .delete-todo{
+  position: absolute;
+  right: 4vw;
+  /* width: 2vw; */
+  font-size: 1rem;
+  /* height: 2vw; */
+  padding: 0.6vh 1vw;
+  background-color: #AE1E2D;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo .delete-todo:hover{
+    opacity: 1;
+}
+.button{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 6vw;
+  bottom: 10vh;
+  padding: 1.3vh 1.5vw;
+ /* background-color: #c27d7d; */
+ background-image: linear-gradient(to bottom right,var(--primary),var(--secondary),var(--light));
+ /* border: 5px solid rgb(183, 64, 116); */
+ border-radius: 50%;
+ cursor: pointer;
+}
+.Closepopup{
+  cursor: pointer;
+}
+.addbut{
+  cursor: pointer;
+}
+.popup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 50%;
+  /* height: 50vh; */
+  /* max-width: 400px; */
+  background-color: var(--light);
+  padding: 32px;
+  box-shadow: 0px 3px 24px var(--dark);
+  border-radius: 2%;
+}
+.popup .Closepopup{
+  color: var(--dark);
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  font-size: 2vw;
+  background-color: #AE1E2D;
+  padding: 0.5vh 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20%;
+}
+.popup .content .add-tasks{
+  font-size: 2.5vw;
+  background-color: rgb(236, 238, 241);
+  margin: 2vh 2vw;
+}
+.popup .input{
+  width: 90%;
+  margin: 4vh 2vw;
+}
+.popup button{
+  background-color: aqua;
+  padding: 1.5vh 1.5vw;
+  border: none;
+  border-radius: 10%;
+  margin: 3vh 2vw;
+}
+.popup .input-sur{
+  /* margin: 2vh 2vw; */
+  background-color: rgb(249, 249, 229);
+  padding-top: 2vh ;
+  padding-bottom: 2vh;
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 15px;
+}

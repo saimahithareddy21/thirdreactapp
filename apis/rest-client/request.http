@@ -1,0 +1,15 @@
+get http://localhost:3500/todos
+###
+post http://localhost:3500/add-todo
+Content-Type: application/json
+
+{
+  
+   "text":"donot talk more"
+
+}
+###
+PUT http://localhost:3500/update-todo/63df8eed6c463c75b7915c53
+
+###
+DELETE http://localhost:3500/delete-todo/63df44c180b2631867d508c3
